@@ -5,3 +5,4 @@ def is_criticality_balanced(temperature, neutrons_emmited):
         return True
     else:
         return False
+    
