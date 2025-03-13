@@ -16,11 +16,11 @@ def is_criticality_balanced(temperature, neutrons_emmited):
     bool: True if the reactor is balanced, False otherwise.    
     """
 
-    if( temperature < 800 and neutrons_emmited > 500
-       and temperature * neutrons_emmited < 500000):
-        return True
-    else:
-        return False
+    return (
+        temperature < 800 and 
+        neutrons_emmited > 500 and
+        temperature * neutrons_emmited < 500000
+    )
     
 
 def reactor_efficiency(voltage, current, theoretical_max_power): 
